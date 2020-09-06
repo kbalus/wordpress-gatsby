@@ -13,6 +13,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpcontent",
+        // GraphQL endpoint, relative to your WordPress home URL.
+        url: "http://gatsby.local/graphql",
+        // GraphQL endpoint using env variable
+        // url: "${process.env.WORDPRESS_URL}/graphql",
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
